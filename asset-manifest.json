@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/e-shopping/static/css/main.0272ad71.css",
+    "main.js": "/e-shopping/static/js/main.f996fade.js",
+    "static/js/488.9d82f6bb.chunk.js": "/e-shopping/static/js/488.9d82f6bb.chunk.js",
+    "static/media/01.mp4": "/e-shopping/static/media/01.1731401ed4118180f462.mp4",
+    "static/media/02.mp4": "/e-shopping/static/media/02.d99756b4ade76b6adec6.mp4",
+    "index.html": "/e-shopping/index.html",
+    "main.0272ad71.css.map": "/e-shopping/static/css/main.0272ad71.css.map",
+    "main.f996fade.js.map": "/e-shopping/static/js/main.f996fade.js.map",
+    "488.9d82f6bb.chunk.js.map": "/e-shopping/static/js/488.9d82f6bb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0272ad71.css",
+    "static/js/main.f996fade.js"
+  ]
+}
