@@ -1,7 +1,8 @@
 
 
         .newsletter-section {
-            background: url("https://th.bing.com/th/id/OIP.eyH2pjrLY4OutPLYPOdnQwHaE6?w=280&h=185&c=7&r=0&o=5&pid=1.7");
+            /* background: url("https://th.bing.com/th/id/OIP.eyH2pjrLY4OutPLYPOdnQwHaE6?w=280&h=185&c=7&r=0&o=5&pid=1.7"); */
+            background: #3A3230;
             color: white;
             text-align: center;
             padding: 20px;
