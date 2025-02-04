@@ -8,6 +8,8 @@ import Clothes from './components/Clothes'
 import Lighting from './components/Lighting'
 import Service from './components/Service'
 import Contact from './components/Contact'
+import Profile from './components/Profile'
+import EditProfile from './components/EditProfile'
 
 
 
@@ -22,6 +24,9 @@ const App = () => {
         <Route path='/e-shopping/Lighting' element={<Lighting/>} />
         <Route path='/e-shopping/Service' element={<Service/>} />
         <Route path='/e-shopping/Contact' element={<Contact/>} />
+        <Route path='/e-shopping/Profile' element={<Profile/>} />
+        <Route path='/e-shopping/Profile/EditProfile' element={<EditProfile/>} />
+        
       </Routes>
       <Footer />
 

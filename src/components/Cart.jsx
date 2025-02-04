@@ -1,7 +1,7 @@
 import React from 'react';
 import { X, Minus, Plus, ShoppingBag } from 'lucide-react';
 
-const Cart = ({ items, onUpdateQuantity, onRemoveItem, onClose, isOpen }) => {
+const Cart = ({ items, onUpdateQuantity, onRemoveItem, onClose, isOpen, onCheckout }) => {
   const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   if (!isOpen) return null;
@@ -64,7 +64,10 @@ const Cart = ({ items, onUpdateQuantity, onRemoveItem, onClose, isOpen }) => {
                 <span className="font-semibold">Total:</span>
                 <span className="font-bold text-xl">{total.toFixed(2)} EGP</span>
               </div>
-              <button className="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition-colors">
+              <button 
+                onClick={onCheckout}
+                className="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition-colors"
+              >
                 Checkout
               </button>
             </div>

@@ -41,6 +41,9 @@ const Navbar = () => {
                     <li>
                     <Link to="/e-shopping/Contact">Contact</Link>
                     </li>
+                    <li>
+                    <Link to="/e-shopping/Profile">Profile</Link>
+                    </li>
                 </ul>
             </nav>
 

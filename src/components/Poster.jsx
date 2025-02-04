@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ShoppingCart as CartIcon } from 'lucide-react';
 import ProductCard from './ProductCard';
 import Cart from './Cart';
+import Payment from './Payment';
 
 const featuredProducts = [
   {
@@ -68,9 +69,7 @@ const featuredProducts = [
     rating: 4.5,
     image: "https://alin00r.github.io/E-Shop-Website/img/products/f8.jpg"
   }
-
-
-  // ... Add all other products with their respective data
+  // ... rest of the featuredProducts array
 ];
 
 const newArrivals = [
@@ -138,13 +137,13 @@ const newArrivals = [
     rating: 3.5,
     image: "https://alin00r.github.io/E-Shop-Website/img/products/n8.jpg"
   },
-
-  // ... Add all other new arrival products
+  // ... rest of the newArrivals array
 ];
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [showPayment, setShowPayment] = useState(false);
 
   const addToCart = (product) => {
     setCartItems(prevItems => {
@@ -174,6 +173,32 @@ function App() {
   const removeFromCart = (productId) => {
     setCartItems(prevItems => prevItems.filter(item => item.id !== productId));
   };
+
+  const handleCheckout = () => {
+    setIsCartOpen(false);
+    setShowPayment(true);
+  };
+
+  const handlePaymentComplete = () => {
+    setCartItems([]);
+    setShowPayment(false);
+    alert('Payment successful! Thank you for your order.');
+  };
+
+  const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+  if (showPayment) {
+    return (
+      <Payment 
+        total={total}
+        onBack={() => {
+          setShowPayment(false);
+          setIsCartOpen(true);
+        }}
+        onComplete={handlePaymentComplete}
+      />
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -240,6 +265,7 @@ function App() {
         onClose={() => setIsCartOpen(false)}
         onUpdateQuantity={updateCartItemQuantity}
         onRemoveItem={removeFromCart}
+        onCheckout={handleCheckout}
       />
     </div>
   );
