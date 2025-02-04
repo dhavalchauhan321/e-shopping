@@ -15,8 +15,8 @@ import {
 
 const Profile = () => {
   const [user] = useState({
-    name: 'Sarah Johnson',
-    email: 'sarah.johnson@example.com',
+    name: 'Chauhan Dhaval',
+    email: 'dhavalchauhan00321@gmail.com',
     avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80',
     memberSince: 'January 2024',
     orders: [
